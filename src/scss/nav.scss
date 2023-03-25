@@ -1,0 +1,23 @@
+.nav {
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    color: var(--text-content-2);
+    &__list {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        font-weight: bold;
+        :first-child {
+            color: black;
+        }
+    }
+    &__hr {
+        height: 1px;
+        background-color: var(--text-content);
+    }
+}

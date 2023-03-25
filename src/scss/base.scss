@@ -1,0 +1,20 @@
+@import '../fonts/gilroy/stylesheet.css';
+
+:root {
+    --text-primary: #070707;
+    --text-content: #070707;
+    --text-content-2: #828282;
+    --surface-2: #F6F6F6;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gilroy';
+    font-size: 18px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 940px;
+}
