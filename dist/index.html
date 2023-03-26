@@ -9,68 +9,151 @@
     <script src='bundle.js'></script>
 </head>
 <body>
-    <nav class="nav">
-        <div class="wrapper">
-            <ul class="nav__list">
-                <li>Home</li>
-                <li>About me</li>
-                <li>Skills</li>
-                <li>Portfolio</li>
-                <li>Contacts</li>
-            </ul>
-            <div class="nav__hr"></div>
-        </div>
-    </nav>
+    <header>
+        <nav class="nav">
+            <div class="wrapper">
+                <input class="nav__btn" type="checkbox" value="false">
+                <ul class="nav__list">
+                    <li class="nav__item active"><a href="#!">Home</a></li>
+                    <li class="nav__item"><a href="#!">About me</a></li>
+                    <li class="nav__item"><a href="#!">Skills</a></li>
+                    <li class="nav__item"><a href="#!">Portfolio</a></li>
+                    <li class="nav__item"><a href="#!">Contacts</a></li>
+                </ul>
+                <div class="nav__hr"></div>
+            </div>
+        </nav>
+    </header>
     <main>
         <section class="preview">
             <div class="wrapper">
                 <div class="preview__text">
-                    <span>Denis <br> Novik</span>
-                    <span>UX | UI designer <br> 24 years old, Minsk</span>
-                    <span>RU | <strong>ENG</strong></span>
+                    <span class="preview__name">Denis <br> Novik</span>
+                    <span class="preview__desc">UX | UI designer <br> 24 years old, Minsk</span>
+                    <span class="lang">
+                        <span class="lang__item">RU</span>
+                        |
+                        <span class="lang__item active">ENG</span>
+                    </span>
                 </div>
                 <div class="preview__img">
-                    <img src="assets/img/banner_1.png" alt="banner">
+                    <picture>
+                        <source media="(max-width: 500px)" srcset="assets/img/banner_1_small.png" alt="banner"/>
+                        <img src="./assets/img/banner_1.png" alt="">
+                    </picture>
                 </div>
             </div>
         </section>
         <section class="about">
-            <div class="about__wrapper">
-                <span class="about__title">About me</span>
-                <p class="about__content">
-                    Hi, I'm Denis – UX/UI designer from Minsk. <br>I'm interested in design and everything connected with it.
-                </p>
-                <p class="about__content">I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
-                <p class="about__content">Ready to implement excellent projects with wonderful people.</p>
+            <div class="wrapper about__wrapper">
+                <h2 class="about__title">About me</h2>
+                <div class="about__content">
+                    <p>
+                        Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.
+                    </p>
+                    <p> I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+                    <p>Ready to implement excellent projects with wonderful people.</p>
+                </div>
             </div>
         </section>
         <section class="skills">
             <div class="wrapper">
                 <div class="skills__head">
-                    <span class="skills__title">Skills</span>
-                    <span class="skills__description">I work in such programs as</span>
+                    <h2 class="skills__title">Skills</h2>
+                    <p class="skills__description">I work in such programs as</p>
                 </div>
                 <div class="skills__cards">
                     <div class="skill-card">
-                        <img class="skill-card__image" src="assets/img/skill_ps.png" alt="ps">
-                        <p class="skill-card__title">Adobe Photoshop</p>
-                        <div class="skill-card__stars"></div>
+                        <div class="skill-card__head">
+                            <img class="skill-card__image" src="assets/img/skill_ps.png" alt="Adobe Photoshop">
+                            <p class="skill-card__title">Adobe Photoshop</p>
+                        </div>
+                        <div class="skill-card__stars" data-value="4">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                        </div>
                     </div>
                     <div class="skill-card">
-                        <img class="skill-card__image" src="assets/img/skill_ai.png" alt="ps">
-                        <p class="skill-card__title">Adobe Illustrator</p>
-                        <div class="skill-card__stars"></div>
+                        <div class="skill-card__head">
+                            <img class="skill-card__image" src="assets/img/skill_ai.png" alt="Adobe Illustrator">
+                            <p class="skill-card__title">Adobe Illustrator</p>
+                        </div>
+                        <div class="skill-card__stars" data-value="3">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                        </div>
                     </div>
                     <div class="skill-card">
-                        <img class="skill-card__image" src="assets/img/skill_ae.png" alt="ps">
-                        <p class="skill-card__title">Adobe After Effects</p>
-                        <div class="skill-card__stars"></div>
+                        <div class="skill-card__head">
+                            <img class="skill-card__image" src="assets/img/skill_ae.png" alt="Adobe After Effects">
+                            <p class="skill-card__title">Adobe After Effects</p>
+                        </div>
+                        <div class="skill-card__stars" data-value="4">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                        </div>
                     </div>
                     <div class="skill-card">
-                        <img class="skill-card__image" src="assets/img/skill_figma.svg" alt="ps">
-                        <p class="skill-card__title">Figma</p>
-                        <div class="skill-card__stars"></div>
+                        <div class="skill-card__head">
+                            <img class="skill-card__image" src="assets/img/skill_figma.svg" alt="Figma">
+                            <p class="skill-card__title">Figma</p>
+                        </div>
+                        <div class="skill-card__stars" data-value="4">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                            <img src="./assets/img/star.svg">
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <div class="wrapper">
+                <h2 class="portfolio__title">Portfolio</h2>
+                <div class="portfolio__item">
+                    <img src="./assets/img/01.png" alt="Online fashion store">
+                    <a href="#!">Online fashion store - Homepage</a>
+                </div>
+                <div class="portfolio__item">
+                    <img src="./assets/img/02.png" alt="Reebok Store">
+                    <a href="#!">Reebok Store - Concept</a>
+                </div>
+                <div class="portfolio__item">
+                    <img src="./assets/img/03.png" alt="Braun Landing Page">
+                    <a href="#!">Braun Landing Page - Concept</a>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="wrapper contacts__wrapper">
+                <h2 class="contacts__title">Contacts</h2>
+                <p class="contacts__subtitle">
+                    Want to know more or just chat?<br>
+                    You are welcome!
+                </p>
+                <button class="contacts__button">Send message</button>
+                <div class="social">
+                    <div class="social__list">
+                        <a href="#!"><img src="./assets/img/linkedIn.svg" alt="LinkedIn"></a>
+                        <a href="#!"><img src="./assets/img/instagram.svg" alt="Instagram"></a>
+                        <a href="#!"><img src="./assets/img/behance.svg" alt="Behance"></a>
+                        <a href="#!"><img src="./assets/img/dribble.svg" alt="Dribble"></a>
+                    </div>
+                    <p class="social__text">
+                        Like me on<br>
+                        LinkedIn, Instagram, Behance, Dribble
+                    </p>
                 </div>
             </div>
         </section>

@@ -1,0 +1,46 @@
+@media (max-width: 500px) {
+    .nav {
+        &__hr {
+            display: none;
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__btn {
+            display: block;
+        }
+
+        &__btn:checked {
+            position: fixed;
+            &::before {
+                background-color: white;
+                content: url('../../dist/assets/img/nav_btn_open.png')
+            }
+
+            & ~ .nav__list {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 1;
+                padding: 66px 30px 0 30px;
+                background-color: white;
+                font-size: 34px;
+                row-gap: 68px;
+            }
+        }
+    }
+    
+    .lang {
+        display: none;
+    }
+}

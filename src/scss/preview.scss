@@ -1,24 +1,25 @@
 .preview {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     &__text {
         margin: 50px 0;
         display: flex;
         justify-content: space-between;
         align-items: end;
         font-weight: 500;
-        :first-child {
+        & > :first-child {
             font-weight: bold;
             font-size: 47px;
         }
-        :last-child {
-            color: var(--text-content-2);
-            font-weight: bold;
-            font-size: inherit;
+        .lang {
             transform: translate(35%, -100%) rotate(-90deg);
-            strong {
-                color: var(--text-content);
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--text-content);
+            &__item {
+                color: var(--text-content-2);
+                &.active {
+                    color: var(--text-content);
+                }
             }
         }
     }
@@ -27,7 +28,7 @@
         max-width: 100%;
         img {
             width: 100%;
-            height: 387px;
+            min-height: 387px;
             object-fit: none;
         }
     }

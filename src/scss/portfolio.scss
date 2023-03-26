@@ -1,0 +1,25 @@
+.portfolio {
+    padding: 112px 0 96px 0;
+    background-color: var(--surface-2);
+    &__title {
+        text-align: center;
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 60px;
+    }
+
+    &__item + &__item {
+        margin-top: 100px;
+    }
+
+    &__item {
+        text-align: center;
+        img {
+            margin-bottom: 45px;
+        }
+        a {
+            color: var(--text-content);
+            text-decoration: underline;
+        }
+    }
+}
