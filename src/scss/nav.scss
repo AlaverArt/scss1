@@ -31,9 +31,23 @@
         right: 30px;
         z-index: 2;
         &::before {
-            display: block;
-            background-color: white;
             content: url('../../dist/assets/img/nav_btn_close.png')
         }
     }
+
+    .lang-mobile {
+        display: none;
+        position: fixed;
+        right: 30px;
+        bottom: 70px;
+        transform: translate(40%, -100%) rotate(90deg);
+        z-index: 2;
+        font-size: 34px;
+        font-weight: bold;
+    }
+}
+
+#nav__btn[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
 }

@@ -11,36 +11,64 @@
         &__btn {
             display: block;
         }
+    }
 
-        &__btn:checked {
+    #nav__btn:checked {
+        position: fixed;
+        
+        & ~ .nav__btn::before {
+            content: url('../../dist/assets/img/nav_btn_open.png')
+        }
+
+        & ~ .nav__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
             position: fixed;
-            &::before {
-                background-color: white;
-                content: url('../../dist/assets/img/nav_btn_open.png')
-            }
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            padding: 66px 30px 0 30px;
+            background-color: white;
+            font-size: 34px;
+            row-gap: 68px;
+        }
 
-            & ~ .nav__list {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                position: fixed;
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
-                width: 100vw;
-                height: 100vh;
-                z-index: 1;
-                padding: 66px 30px 0 30px;
-                background-color: white;
-                font-size: 34px;
-                row-gap: 68px;
-            }
+        & ~ .lang-mobile {
+            display: block;
         }
     }
-    
+
     .lang {
         display: none;
+    }
+
+    .skill-card {
+        width: 100%;
+    }
+
+    .contacts {
+        &__button {
+            width: 100%;
+        }
+    }
+
+    .preview {
+        &__img img {
+            object-fit: cover;
+        }
+        &__text {
+            margin: 50px 0 36px 0;
+            flex-direction: column;
+            align-items: start;
+        }
+        &__desc {
+            margin-top: 14px;
+        }
     }
 }

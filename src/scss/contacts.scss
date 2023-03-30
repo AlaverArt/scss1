@@ -18,11 +18,24 @@
     }
 
     &__button {
-        color: white;
+        position: relative;
+        top: 0px;
         height: 42px;
         width: 180px;
         border-radius: 21px;
+        
+        color: white;
         background-color: var(--text-content);
+        
+        transition: top 0.1s, background-color 0.2s;
+
+        &:hover {
+            background-color: var(--text-content-hover);
+        }
+
+        &:active {
+            top: 4px;
+        }
     }
 }
 
