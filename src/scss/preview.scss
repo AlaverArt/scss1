@@ -17,15 +17,16 @@
     @keyframes preview-image {
         0% {
             opacity: 0.2;
-            transform: translateX(100%);
+            transform: translate3d(100%, 0, 0);
         }
         100% {
             opacity: 1;
-            transform: translateX(0%);
+            transform: translate3d(0%, 0, 0);
         }
     }
 
     &__img {
+        will-change: transform;
         animation: preview-image 1s cubic-bezier(.03,.85,.17,.96);
         max-width: 100%;
         img {
