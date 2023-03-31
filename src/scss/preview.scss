@@ -10,15 +10,13 @@
     }
 
     &__name {
-        display: inline-block;
         font-weight: bold;
         font-size: 47px;
-        vertical-align: bottom;
     }
 
     @keyframes preview-image {
         0% {
-            opacity: 0.3;
+            opacity: 0.2;
             transform: translateX(100%);
         }
         100% {
@@ -28,7 +26,7 @@
     }
 
     &__img {
-        animation: preview-image 0.6s cubic-bezier(.03,.85,.17,.96);
+        animation: preview-image 1s cubic-bezier(.03,.85,.17,.96);
         max-width: 100%;
         img {
             width: 100%;
@@ -50,4 +48,15 @@
             color: var(--text-content);
         }
     }
+
+    @keyframes lang {
+        from {
+            transform: translateY(-300px)  translate(35%, -120%) rotate(-90deg);
+        }
+        to {
+            transform: translateY(0px)  translate(35%, -120%) rotate(-90deg);
+        }
+    }
+
+    animation: lang 1s;
 }

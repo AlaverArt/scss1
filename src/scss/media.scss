@@ -17,6 +17,9 @@
         position: fixed;
         
         & ~ .nav__btn::before {
+            position: fixed;
+            top: 68px;
+            right: 30px;
             content: url('../../dist/assets/img/nav_btn_open.png')
         }
 
@@ -46,6 +49,7 @@
 
     .lang {
         display: none;
+        animation: none;
     }
 
     .skill-card {
