@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Study project HTML&SCSS",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --node-env=production",
     "start": "webpack serve"
   },
   "repository": {
@@ -18,8 +18,14 @@
   "homepage": "https://github.com/AlaverArt/scss1#readme",
   "devDependencies": {
     "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.5",
     "node-sass": "^8.0.0",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.2.4",
+    "postcss-preset-env": "^8.3.0",
     "sass-loader": "^13.2.1",
     "style-loader": "^3.3.2",
     "webpack": "^5.76.3",
